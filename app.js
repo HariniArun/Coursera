@@ -2,8 +2,10 @@
 'use strict';
 
 angular.module('LunchCheck', [])
+  .controller('LunchCheckController', LunchCheckController);
 
-.controller('LunchCheckController', function ($scope) {
+  LunchCheckController.$inject = ['$scope'];
+  function LunchCheckController($scope){
   $scope.items= "";
   $scope.message = "";
 
@@ -45,7 +47,7 @@ angular.module('LunchCheck', [])
   }
 
 
-});
+}
 
 
 })();
